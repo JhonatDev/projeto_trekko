@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Trekko</h1>
+    </header>
+    <div class="columns">
+        <div class="column" id="todo">
+            <h2>Para Fazer</h2>
+            <div class="taskbox" id="todo-taskContainer"></div>
+            <label for="todo-nameInput">Nome:</label>
+            <input type="text" id="todo-nameInput">
+            <label for="todo-descriptionInput">Descrição:</label>
+            <textarea id="todo-descriptionInput" cols="30" rows="10"></textarea>
+            <button type="button" onclick="newTask('todo')">Adicionar Tarefa</button>
+        </div>
+        <div class="column" id="inProgress">
+            <h2>Fazendo</h2>
+            <div class="taskbox" id="inProgress-taskContainer"></div>
+            <label for="inProgress-nameInput">Nome:</label>
+            <input type="text" id="inProgress-nameInput">
+            <label for="inProgress-descriptionInput">Descrição:</label>
+            <textarea id="inProgress-descriptionInput" cols="30" rows="10"></textarea>
+            <button type="button" onclick="newTask('inProgress')">Adicionar Tarefa</button>
+        </div>
+        <div class="column" id="done">
+            <h2>Concluído</h2>
+            <div class="taskbox" id="done-taskContainer"></div>
+            <label for="done-nameInput">Nome:</label>
+            <input type="text" id="done-nameInput">
+            <label for="done-descriptionInput">Descrição:</label>
+            <textarea id="done-descriptionInput" cols="30" rows="10"></textarea>
+            <button type="button" onclick="newTask('done')">Adicionar Tarefa</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

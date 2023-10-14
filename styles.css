@@ -10,12 +10,13 @@
   }
   
   .column {
-    background-color: blueviolet;
+    background-color: #4bb087;
     padding: 20px;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
     margin: 10px;
+    border: 3mm ridge #000000;
   }
   
   .containerTask {

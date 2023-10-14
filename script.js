@@ -12,10 +12,22 @@ function createTask(name, description) {
     titleTask.innerText = name;
     const descriptionTask = document.createElement('p');
     descriptionTask.innerText = description;
+    const deleteButton = document.createElement('button2');
+    const deleteIcon = document.createElement('i');
+    deleteIcon.className = "fas fa-trash";
+    deleteButton.appendChild(deleteIcon);
+    deleteButton.addEventListener('click', function() {
+        taskBox.remove();
+        saveTask();
+    });
     taskBox.appendChild(titleTask);
     taskBox.appendChild(descriptionTask);
+    taskBox.appendChild(deleteButton);
     return taskBox;
+    
 }
+
+
 
 function newTask(columnid) {
     const nameInput = document.getElementById(`${columnid}-nameInput`).value;

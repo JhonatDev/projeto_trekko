@@ -50,3 +50,23 @@ function saveTask() {
     localStorage.setItem('savedTasks', tasksJSON);
     console.log(tasksJSON);
 }
+function loadTasks() {
+    const savedTasks = localStorage.getItem('savedTasks'); // Corrija o nome da chave
+
+    if (savedTasks) {
+        const tasks = JSON.parse(savedTasks);
+
+        Object.keys(tasks).forEach(columnId => {
+            const column = document.getElementById(columnId);
+            const columnTasks = tasks[columnId];
+
+            columnTasks.forEach(taskData => {
+                const task = createTask(taskData.title, taskData.description); // Corrija o acesso aos dados da tarefa
+                column.querySelector('.taskbox').appendChild(task); // Certifique-se de que está acessando a classe correta para a lista de tarefas
+            });
+        });
+    }
+}
+
+// Chame a função loadTasks para carregar tarefas ao carregar a página
+loadTasks();

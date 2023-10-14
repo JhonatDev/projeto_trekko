@@ -1,3 +1,10 @@
+var seletorCor = document.getElementById('seletorCor');
+
+seletorCor.addEventListener('input', function() {
+  var corSelecionada = seletorCor.value;
+  document.body.style.backgroundColor = corSelecionada;
+});
+
 function createTask(name, description) {
     const taskBox = document.createElement('div');
     taskBox.className = "containerTask";

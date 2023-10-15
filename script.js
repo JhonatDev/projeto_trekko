@@ -34,9 +34,14 @@ function newTask(columnid) {
     const nameInput = document.getElementById(`${columnid}-nameInput`).value;
     const descriptionInput = document.getElementById(`${columnid}-descriptionInput`).value;
 
+    if (nameInput.trim() === '' || descriptionInput.trim() === '') {
+        alert("Por favor, preencha todos os campos antes de adicionar uma tarefa.");
+        return; 
+    }
+
     const boxCreated = createTask(nameInput, descriptionInput);
     document.getElementById(`${columnid}-taskContainer`).appendChild(boxCreated);
-    saveTask(); // Chame a função saveTask após criar a nova tarefa
+    saveTask(); 
 }
 
 function saveTask() {
@@ -88,14 +93,14 @@ function loadTasks() {
     }
 }
 
-//  função loadTasks para carregar tarefas ao carregar a página
+
 loadTasks();
 var seletorCor = document.getElementById('seletorCor');
 
 seletorCor.addEventListener('input', function() {
   var corSelecionada = seletorCor.value;
   document.body.style.backgroundColor = corSelecionada;
-  saveBackgroundColor(corSelecionada); // Salve a cor de fundo selecionada
+  saveBackgroundColor(corSelecionada); 
 });
 
 function saveBackgroundColor(color) {
@@ -109,6 +114,4 @@ function loadBackgroundColor() {
     document.body.style.backgroundColor = savedBackgroundColor;
   }
 }
-
-// função loadBackgroundColor para carregar a cor de fundo ao carregar a página
 loadBackgroundColor();

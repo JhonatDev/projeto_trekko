@@ -16,6 +16,7 @@
   right: 27px;  
   z-index: 2;
   pointer-events: none;
+  color: white;
 }
 
 #seletorCor {
@@ -48,10 +49,11 @@
   }
   
   .containerTask {
-    border: 4px solid rgb(209, 197, 197);
+    border: 4px solid #6f725f;
     margin-bottom: 10px;
     padding: 10px;
   }
+  
   
   button {
     cursor: pointer;
@@ -66,3 +68,18 @@
     background-color: #666666;
   }
   
+  .button2 {
+    background-color: #37392b; 
+    color: white; 
+    border: 1mm black; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    cursor: pointer;
+    position: relative;
+    top: 7px;
+    left: 190px;
+}
+.button2:hover{
+  background-color: red;
+}
+ 

@@ -12,7 +12,8 @@ function createTask(name, description) {
     titleTask.innerText = name;
     const descriptionTask = document.createElement('p');
     descriptionTask.innerText = description;
-    const deleteButton = document.createElement('button2');
+    const deleteButton = document.createElement('button');
+    deleteButton.className = "button2"
     const deleteIcon = document.createElement('i');
     deleteIcon.className = "fas fa-trash";
     deleteButton.appendChild(deleteIcon);

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Lato&family=Young+Serif&display=swap');
 .labarra {
   overflow: hidden;
-  background-color: rgba(175, 184, 123, 0.5); 
+  background-color: #dce5aa; 
   display: flex;
   border: 1px double;
   width: 100%;
@@ -33,7 +33,7 @@
   }
   
   .columns {
-    margin-top: 90px;
+    margin-top: 130px;
     display: flex;
     justify-content: space-evenly;
   }
@@ -45,7 +45,7 @@
     flex-direction: column;
     border-radius: 10px;
     margin: 10px;
-    border: 2mm ridge #000000;
+    border: 1mm solid #000000;
   }
   
   .containerTask {
@@ -60,7 +60,7 @@
     cursor: pointer;
     background-color: #9c9c9c;
     color: black;
-    border: 2mm inset #6f725f;
+    border: 1mm inset #6f725f;
     border-radius: 5px;
     padding: 5px 10px;
   }

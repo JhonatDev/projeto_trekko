@@ -71,7 +71,7 @@ function saveTask() {
     console.log(tasksJSON);
 }
 function loadTasks() {
-    const savedTasks = localStorage.getItem('savedTasks'); // Corrija o nome da chave
+    const savedTasks = localStorage.getItem('savedTasks'); 
 
     if (savedTasks) {
         const tasks = JSON.parse(savedTasks);
@@ -81,12 +81,34 @@ function loadTasks() {
             const columnTasks = tasks[columnId];
 
             columnTasks.forEach(taskData => {
-                const task = createTask(taskData.title, taskData.description); // Corrija o acesso aos dados da tarefa
-                column.querySelector('.taskbox').appendChild(task); // Certifique-se de que está acessando a classe correta para a lista de tarefas
+                const task = createTask(taskData.title, taskData.description); 
+                column.querySelector('.taskbox').appendChild(task); 
             });
         });
     }
 }
 
-// Chame a função loadTasks para carregar tarefas ao carregar a página
+//  função loadTasks para carregar tarefas ao carregar a página
 loadTasks();
+var seletorCor = document.getElementById('seletorCor');
+
+seletorCor.addEventListener('input', function() {
+  var corSelecionada = seletorCor.value;
+  document.body.style.backgroundColor = corSelecionada;
+  saveBackgroundColor(corSelecionada); // Salve a cor de fundo selecionada
+});
+
+function saveBackgroundColor(color) {
+  localStorage.setItem('backgroundColor', color);
+}
+
+function loadBackgroundColor() {
+  const savedBackgroundColor = localStorage.getItem('backgroundColor');
+
+  if (savedBackgroundColor) {
+    document.body.style.backgroundColor = savedBackgroundColor;
+  }
+}
+
+// função loadBackgroundColor para carregar a cor de fundo ao carregar a página
+loadBackgroundColor();

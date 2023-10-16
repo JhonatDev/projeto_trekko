@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Lato&family=Young+Serif&display=swap');
 .labarra {
   overflow: hidden;
-  background-color: #dce5aa; 
+  background-color: rgb(0,0,0,0.3); 
   display: flex;
   border: 1px double;
   width: 100%;
@@ -12,14 +12,16 @@
 }
 .paleta{
   position: fixed;
-  top: 25px;
-  right: 27px;  
+  top: 10px;
+  right: 10px;
   z-index: 2;
   pointer-events: none;
   color: white;
+  height: 50px;
 }
 
 #seletorCor {
+  opacity: 0;
   position: fixed;
   top: 10px;
   right: 10px;
@@ -39,7 +41,7 @@
   }
   
   .column {
-    background-color: #afb48f;
+    background-color: rgb(0,0,0,0.3);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -49,6 +51,7 @@
   }
   
   .containerTask {
+    background-color: rgba(222, 222, 222, 0.708);
     border: 4px solid #6f725f;
     margin-bottom: 10px;
     padding: 10px;
@@ -58,7 +61,7 @@
   
   button {
     cursor: pointer;
-    background-color: #d1d1d1;
+    background-color: rgba(133, 133, 133, 0.3);
     color: black;
     border: 1mm inset #6f725f;
     border-radius: 5px;
@@ -71,7 +74,7 @@
   
   .button2 {
     background-color: #37392b; 
-    color: white; 
+    color: rgba(249, 249, 249, 0.475); 
     border: 1mm black; 
     padding: 5px 10px; 
     border-radius: 5px; 
@@ -87,9 +90,9 @@
 h1{
   font-size: 45px;
   font-family:'Young Serif', serif;
-  text-shadow:  5px 5px #5d633f;
+  text-shadow:  5px 5px rgb(0,0,0,0.5);
   position: relative;
-  top: -15px;
+  top: -20px;
   left: 8px;
 }
 
@@ -102,4 +105,17 @@ label {
   font-family: 'Lato', sans-serif;
 
 }
- 
+
+#add{
+  margin: 20px 20px 0px 20px;
+  width: 200px;
+  height: 30px;
+}
+
+textarea{
+  background-color: rgba(222, 222, 222, 0.708);
+}
+
+input{
+  background-color: rgba(222, 222, 222, 0.708);
+}

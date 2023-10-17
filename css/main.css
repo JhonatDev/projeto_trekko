@@ -41,6 +41,7 @@
   }
   
   .column {
+    width: 350px; /* Define uma largura máxima para o elemento */
     background-color: rgb(0,0,0,0.3);
     padding: 20px;
     display: flex;
@@ -51,21 +52,39 @@
   }
   
   .containerTask {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  #title_Task{
+    position: relative;
+    top: 30px;
+    display: flex;
+    height: 100%;
+    width: 82%;
     background-color: rgba(222, 222, 222, 0.708);
     border: 4px solid #6f725f;
-    margin-bottom: 10px;
     padding: 10px;
     font-family: 'Lato', sans-serif;
   }
-  
+
+  #description_Task{
+    white-space: pre-wrap; /* Quebra o texto automaticamente */
+    position: relative;
+    background-color: rgba(222, 222, 222, 0.708);
+    border: 4px solid #6f725f;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+  }
   
   button {
     cursor: pointer;
     background-color: rgba(133, 133, 133, 0.3);
     color: black;
     border: 1mm inset #6f725f;
-    border-radius: 5px;
-    padding: 5px 10px;
   }
   
   button:hover {
@@ -73,15 +92,17 @@
   }
   
   .button2 {
+    position: absolute;
+    height: 40px;
+    width: 40px;
     background-color: #37392b; 
-    color: rgba(249, 249, 249, 0.475); 
-    border: 1mm black; 
-    padding: 5px 10px; 
-    border-radius: 5px; 
+    color: rgba(249, 249, 249, 0.475);
+    border: 1mm black;
+    padding: 5px 10px;
+    border-radius: 5px;
     cursor: pointer;
-    position: relative;
-    top: 7px;
-    left: 190px;
+    top: 55px;
+    left: 260px;
 }
 .button2:hover{
   background-color: red;
@@ -90,7 +111,6 @@
 h1{
   font-size: 45px;
   font-family:'Young Serif', serif;
-  text-shadow:  5px 5px rgb(0,0,0,0.5);
   position: relative;
   top: -20px;
   left: 8px;
@@ -107,13 +127,17 @@ label {
 }
 
 #add{
-  margin: 20px 20px 0px 20px;
+  position: relative;
+  top: 10px;
+  left: 50px;
   width: 200px;
   height: 30px;
+
 }
 
 textarea{
   background-color: rgba(222, 222, 222, 0.708);
+  resize: vertical;
 }
 
 input{

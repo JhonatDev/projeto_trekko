@@ -9,8 +9,10 @@ function createTask(name, description) {
     const taskBox = document.createElement('div');
     taskBox.className = "containerTask";
     const titleTask = document.createElement('h4');
+    titleTask.id = "title_Task"; // Define o ID
     titleTask.innerText = name;
     const descriptionTask = document.createElement('p');
+    descriptionTask.id = "description_Task"; // Define o ID
     descriptionTask.innerText = description;
     const deleteButton = document.createElement('button');
     deleteButton.className = "button2"

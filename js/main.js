@@ -20,8 +20,12 @@ function createTask(name, description) {
     deleteIcon.className = "fas fa-trash";
     deleteButton.appendChild(deleteIcon);
     deleteButton.addEventListener('click', function() {
-        taskBox.remove();
-        saveTask();
+        const confirmDelete = confirm("Tem certeza que deseja deletar esta tarefa?");
+        
+        if (confirmDelete) {
+            taskBox.remove();
+            saveTask();
+        }
     });
     taskBox.appendChild(titleTask);
     taskBox.appendChild(descriptionTask);
@@ -29,8 +33,6 @@ function createTask(name, description) {
     return taskBox;
     
 }
-
-
 
 function newTask(columnid) {
     const nameInput = document.getElementById(`${columnid}-nameInput`).value;

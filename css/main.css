@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Lato&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 .labarra {
   overflow: hidden;
   background-color: rgb(0,0,0,0.3); 
@@ -110,19 +111,19 @@
 
 h1{
   font-size: 45px;
-  font-family:'Young Serif', serif;
+  font-family: 'Rajdhani', sans-serif;
   position: relative;
   top: -20px;
   left: 8px;
 }
 
 h2{
-  font-family: 'Gabarito', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   font-size: 25px;
 }
 
 label {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
 
 }
 
@@ -141,4 +142,5 @@ textarea{
 
 input{
   background-color: rgba(222, 222, 222, 0.708);
+  font-family: 'Rajdhani', sans-serif;
 }

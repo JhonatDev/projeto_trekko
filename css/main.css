@@ -64,7 +64,7 @@
 
   #title_Task{
     position: relative;
-    top: 10px;
+    top: 6px;
     left: 10px;
     display: flex;
     height: 100%;
@@ -98,7 +98,7 @@
   
   .button2 {
     opacity: 0.2;
-    position: absolute;
+    position: relative;
     height: 40px;
     width: 40px;
     background-color: #37392b; 
@@ -107,7 +107,7 @@
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-    top: 37px;
+    top: -52px;
     left: 253px;
 }
 .button2:hover{

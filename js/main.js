@@ -23,7 +23,7 @@ function createTask(name, description) {
         let element = document.createElement("div");
         element.classList.add("box-background");
         element.innerHTML = `<div class="box">
-                                    <h3>realmente deseja excluir</h3>
+                                    <h3>Realmente deseja excluir?</h3>
                                     <div>
                                         <button id="trueButton" class="btn green">Yes</button> <!-- Set Id for both buttons -->
                                         <button id="falseButton" class="btn red">No</button>

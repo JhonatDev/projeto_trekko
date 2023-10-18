@@ -5,6 +5,21 @@ seletorCor.addEventListener('input', function() {
   document.body.style.backgroundColor = corSelecionada;
 });
 
+function allowDrop(event) {
+    event.preventDefault(); // Evite o comportamento padrão de soltar
+}
+
+function drop(event) {
+    event.preventDefault(); // Evite o comportamento padrão de soltar
+    const draggedTask = document.querySelector('.dragging'); // Encontre a tarefa arrastada
+    const targetColumn = event.target.closest('.column'); // Encontre a coluna de destino
+    const taskContainer = targetColumn.querySelector('.taskbox'); // Encontre o contêiner de tarefas na coluna de destino
+
+    // Mova a tarefa para a coluna de destino
+    taskContainer.appendChild(draggedTask);
+    saveTask(); // Salve as alterações após o arrastar e soltar
+}
+
 function createTask(name, description) {
     const taskBox = document.createElement('div');
     taskBox.className = "containerTask";
@@ -14,6 +29,14 @@ function createTask(name, description) {
     const descriptionTask = document.createElement('p');
     descriptionTask.id = "description_Task"; // Define o ID
     descriptionTask.innerText = description;
+    taskBox.draggable = true;
+    taskBox.addEventListener('dragstart', function(event) {
+        event.dataTransfer.setData('text/plain', null);
+        event.target.classList.add('dragging'); // Adicione uma classe para indicar que está sendo arrastado
+    });
+    taskBox.addEventListener('dragend', function(event) {
+        event.target.classList.remove('dragging'); // Remova a classe de arrastar ao soltar
+    });
     const deleteButton = document.createElement('button');
     deleteButton.className = "button2"
     const deleteIcon = document.createElement('i');

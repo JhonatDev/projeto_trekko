@@ -23,7 +23,7 @@
     </header>
     <div class="columns">
         <div>
-            <div class="column" id="todo">
+            <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <h2>Para Fazer</h2>
                 <div class="taskbox" id="todo-taskContainer"></div>
                 <label for="todo-nameInput">Nome:</label>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div>
-            <div class="column" id="inProgress">
+            <div class="column" id="inProgress" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <h2>Fazendo</h2>
                 <div class="taskbox" id="inProgress-taskContainer"></div>
                 <label for="inProgress-nameInput">Nome:</label>
@@ -45,7 +45,7 @@
             </div>
         </div>
         <div>
-            <div class="column" id="done">
+            <div class="column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <h2>Concluído</h2>
                 <div class="taskbox" id="done-taskContainer"></div>
                 <label for="done-nameInput">Nome:</label>

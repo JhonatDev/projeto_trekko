@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Lato&family=Young+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+
 .labarra {
   overflow: hidden;
-  background-color: rgb(0,0,0,0.3); 
+  background-color: rgb(0,0,0,0.3);
   display: flex;
   border: 1px double;
   width: 100%;
@@ -42,6 +44,7 @@
   }
   
   .column {
+    font-size: 20px;
     width: 350px; /* Define uma largura máxima para o elemento */
     background-color: rgb(0,0,0,0.3);
     padding: 20px;
@@ -54,7 +57,6 @@
   
   .containerTask {
     position: relative;
-    display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
@@ -62,13 +64,12 @@
 
   #title_Task{
     position: relative;
-    top: 30px;
+    top: 10px;
+    left: 10px;
     display: flex;
     height: 100%;
     width: 82%;
-    background-color: rgba(222, 222, 222, 0.708);
-    border: 4px solid #6f725f;
-    padding: 10px;
+    margin: 0px;
     font-family: 'Rajdhani', sans-serif;
   }
 
@@ -78,10 +79,12 @@
     background-color: rgba(222, 222, 222, 0.708);
     border: 4px solid #6f725f;
     padding: 10px;
+    margin: 5px;
     font-family: 'Lato', sans-serif;
   }
   
   button {
+    font-size: 20px;
     cursor: pointer;
     background-color: rgba(133, 133, 133, 0.3);
     color: black;
@@ -94,6 +97,7 @@
   }
   
   .button2 {
+    opacity: 0.2;
     position: absolute;
     height: 40px;
     width: 40px;
@@ -103,11 +107,11 @@
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-    top: 55px;
-    left: 260px;
+    top: 37px;
+    left: 253px;
 }
 .button2:hover{
-  background-color: red;
+  opacity: 1;
 }
 
 h1{
@@ -119,6 +123,7 @@ h1{
 }
 
 h2{
+
   font-family: 'Rajdhani', sans-serif;
   font-size: 25px;
 }
@@ -139,10 +144,63 @@ label {
 textarea{
   background-color: rgba(222, 222, 222, 0.708);
   resize: vertical;
+  height: 200px;
+  font-size: 20px;
   font-family: 'Rajdhani', sans-serif;
 }
 
 input{
+  font-size: 20px;
   background-color: rgba(222, 222, 222, 0.708);
   font-family: 'Rajdhani', sans-serif;
+}
+
+
+body {
+  font-family: sans-serif
+}
+
+.box-background {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  /* Bringing the box to center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 300px;
+  height: 100px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.box div {
+  margin: 10px;
+}
+.btn {
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px;
+}
+.red {
+  background: red;
+}
+.green {
+  background: green;
 }

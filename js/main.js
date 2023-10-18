@@ -19,13 +19,29 @@ function createTask(name, description) {
     const deleteIcon = document.createElement('i');
     deleteIcon.className = "fas fa-trash";
     deleteButton.appendChild(deleteIcon);
-    deleteButton.addEventListener('click', function() {
-        const confirmDelete = confirm("Tem certeza que deseja deletar esta tarefa?");
-        
-        if (confirmDelete) {
-            taskBox.remove();
-            saveTask();
-        }
+    deleteButton.addEventListener('click',function myConfirmBox(message) {
+        let element = document.createElement("div");
+        element.classList.add("box-background");
+        element.innerHTML = `<div class="box">
+                                    <h3>realmente deseja excluir</h3>
+                                    <div>
+                                        <button id="trueButton" class="btn green">Yes</button> <!-- Set Id for both buttons -->
+                                        <button id="falseButton" class="btn red">No</button>
+                                    </div>
+                                </div>`;
+        document.body.appendChild(element);
+        return new Promise(function (resolve, reject) {
+            document.getElementById("trueButton").addEventListener("click", function () {
+                resolve(true);
+                taskBox.remove();
+                saveTask();
+                document.body.removeChild(element);
+            });
+            document.getElementById("falseButton").addEventListener("click", function () {
+                resolve(false);
+                document.body.removeChild(element);
+            });
+        })
     });
     taskBox.appendChild(titleTask);
     taskBox.appendChild(descriptionTask);

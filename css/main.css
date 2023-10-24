@@ -81,6 +81,7 @@
     padding: 10px;
     margin: 5px;
     font-family: 'Lato', sans-serif;
+    word-wrap: break-word;
   }
   
   button {

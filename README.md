@@ -1,37 +1,15 @@
-# Projeto Trello - Parte 1 de 2
+O Trekko é uma ferramenta de colaboração e gerenciamento de projetos que serve para organizar tarefas e informações de forma visual e colaborativa. Ele permite que equipes e indivíduos acompanhem o progresso de projetos, gerenciem tarefas e colaborem de maneira eficiente. Aqui estão algumas das principais finalidades para as quais o Trekko é amplamente utilizado:
 
-## Projeto_Trekko
+1. **Gerenciamento de Projetos:** O Trekko permite criar quadros para representar projetos e organizar tarefas em listas e cartões. Isso facilita o acompanhamento do progresso do projeto, a atribuição de tarefas e o gerenciamento de prazos.
 
-### Conteúdo do Exercício
+2. **Gestão de Tarefas:** Pode ser usado como uma lista de tarefas pessoal, ajudando os usuários a manterem o controle de suas atividades diárias, lembretes e compromissos.
 
-Para contemplar parte dos requisitos levantados em sala nos projetos anteriores, implemente as seguintes funcionalidades elaboradas em sala:
+3. **Acompanhamento de Tarefas em Equipe:** Equipes de trabalho podem compartilhar quadros do Trekko para colaborar em projetos em conjunto, atribuir e manter todos atualizados.
 
-### Estrutura HTML
+4. **Colaboração Remota:** É uma opção eficaz para equipes que trabalham remotamente, pois permite que membros da equipe acessem e atualizem informações de qualquer lugar com uma conexão à internet.
 
-Deve contemplar três colunas, sendo: todo, inProgress e done, em cada coluna contendo um formulário com dois campos: nome e descrição e um botão adicionar
+5. **Gerenciamento de Informações:** Pode ser usado para organizar informações, ideias e projetos de forma a torná-los mais acessíveis e fáceis de entender.
 
-### Funções
+6. **Acompanhamento de Progresso:** O Trekko fornece uma visão clara do estado atual de cada tarefa ou projeto, ajudando os usuários a identificar gargalos e áreas que precisam de atenção.
 
-#### ChangeBackgroundColor()
-
-Altera cor do background
-
-#### AddTask()
-
-É chamado através do botão adicionar, criando o task element e persistindo no localStorage
-
-#### CreateTaskElement(name, description)
-
-Cria o elemento html para injetar na coluna dinâmicamente
-
-#### saveTask()
-
-Persistir tasks no localStorage
-
-#### loadTask()
-
-Recuperar tasks persistidas no localStorage
-
-Ao implementar o html e as funcionalidades elencadas, no sistema será possível alterar a cor do background, adicionar tarefas, mostrar as tarefas e carregar todas as tarefas ao dar refresh na página
-
-A entrega do código é individual através do git, podendo ser elaborada em grupo ou também individualmente.
+Em resumo, o Trekko é uma ferramenta versátil que serve como um quadro virtual para organização e colaboração em uma ampla variedade de contextos, desde o gerenciamento de projetos complexos até o acompanhamento de tarefas pessoais do dia a dia.

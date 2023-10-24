@@ -188,9 +188,26 @@ body {
   flex-direction: column;
   border-radius: 5px;
 }
+
+.box-alerta {
+  width: 700px;
+  height: 150px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
 .box div {
   margin: 10px;
 }
+
 .btn {
   width: 100px;
   border: none;
@@ -202,5 +219,9 @@ body {
   background: red;
 }
 .green {
+  background: green;
+}
+
+.ok {
   background: green;
 }

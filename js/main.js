@@ -90,7 +90,22 @@ function newTask(columnid) {
   const descriptionInput = document.getElementById(`${columnid}-descriptionInput`).value;
 
   if (nameInput.trim() === '' || descriptionInput.trim() === '') {
-    alert("Por favor, preencha todos os campos antes de adicionar uma tarefa.");
+
+      let element = document.createElement("div");
+      element.classList.add("box-background");
+      element.innerHTML = `<div class="box-alerta">
+                                    <h3>Por favor, preencha todos os campos antes de adicionar uma tarefa.</h3>
+                                    <div>
+                                        <button id="falseButton" class="btn ok">OK</button>
+                                    </div>
+                                </div>`;
+      document.body.appendChild(element);
+      return new Promise(function(resolve, reject) {
+        document.getElementById("falseButton").addEventListener("click", function() {
+          resolve(false);
+          document.body.removeChild(element);
+        });
+      });
     return;
   }
 

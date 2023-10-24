@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="labarra">
+            <h1> Trekko </h1>
+            <div class="paleta">
+                <img src="imagens/color.png" width="50" height="50">
+            </div>
+
+            <input type="color" id="seletorCor">
+        </div>
+    </header>
+    <div class="columns">
+        <div>
+            <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Para Fazer</h2>
+                <div class="taskbox" id="todo-taskContainer"></div>
+                <label for="todo-nameInput">Nome:</label>
+                <input type="text" id="todo-nameInput">
+                <label for="todo-descriptionInput">Descrição:</label>
+                <textarea id="todo-descriptionInput" cols="30" rows="10"></textarea>
+                <button class="add" type="button" onclick="newTask('todo')">Adicionar Tarefa</button>
+            </div>
+        </div>
+        <div>
+            <div class="column" id="inProgress" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Fazendo</h2>
+                <div class="taskbox" id="inProgress-taskContainer"></div>
+                <label for="inProgress-nameInput">Nome:</label>
+                <input type="text" id="inProgress-nameInput">
+                <label for="inProgress-descriptionInput">Descrição:</label>
+                <textarea id="inProgress-descriptionInput" cols="30" rows="10"></textarea>
+                <button class="add" type="button" onclick="newTask('inProgress')">Adicionar Tarefa</button>
+            </div>
+        </div>
+        <div>
+            <div class="column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Concluído</h2>
+                <div class="taskbox" id="done-taskContainer"></div>
+                <label for="done-nameInput">Nome:</label>
+                <input type="text" id="done-nameInput">
+                <label for="done-descriptionInput">Descrição:</label>
+                <textarea id="done-descriptionInput" cols="30" rows="10"></textarea>
+                <button class="add" type="button" onclick="newTask('done')">Adicionar Tarefa</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

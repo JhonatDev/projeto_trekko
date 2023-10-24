@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Lato&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+
+.labarra {
+  overflow: hidden;
+  background-color: rgb(70,70,70,0.3);
+  display: flex;
+  border: 1px double;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.paleta{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  pointer-events: none;
+  color: white;
+  height: 50px;
+}
+
+#seletorCor {
+  opacity: 0;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+* {
+    margin: 10;
+    box-sizing: border-box;
+  }
+  
+  .columns {
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .column {
+    font-size: 20px;
+    width: 350px; /* Define uma largura máxima para o elemento */
+    background-color: rgb(70,70,70,0.3);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 10px;
+    border: 1mm solid #000000;
+  }
+  
+  .containerTask {
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  #title_Task{
+    position: relative;
+    top: 6px;
+    left: 10px;
+    display: flex;
+    height: 100%;
+    width: 82%;
+    margin: 0px;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  #description_Task{
+    white-space: pre-wrap; /* Quebra o texto automaticamente */
+    position: relative;
+    background-color: rgba(222, 222, 222, 0.708);
+    border: 4px solid #6f725f;
+    padding: 10px;
+    margin: 5px;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  button {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgba(133, 133, 133, 0.3);
+    color: black;
+    border: 1mm inset #6f725f;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  
+  button:hover {
+    background-color: #666666;
+  }
+  
+  .button2 {
+    opacity: 0.2;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    background-color: #37392b; 
+    color: rgba(249, 249, 249, 0.475);
+    border: 1mm black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    top: -52px;
+    left: 253px;
+}
+.button2:hover{
+  opacity: 1;
+}
+
+h1{
+  font-size: 45px;
+  font-family: 'Rajdhani', sans-serif;
+  position: relative;
+  top: -20px;
+  left: 8px;
+}
+
+h2{
+
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 25px;
+}
+
+label {
+  font-family: 'Rajdhani', sans-serif;
+
+}
+
+.add{
+  position: relative;
+  top: 10px;
+  left: 50px;
+  width: 200px;
+  height: 30px;
+}
+
+textarea{
+  background-color: rgba(222, 222, 222, 0.708);
+  resize: vertical;
+  height: 200px;
+  font-size: 20px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+input{
+  font-size: 20px;
+  background-color: rgba(222, 222, 222, 0.708);
+  font-family: 'Rajdhani', sans-serif;
+}
+
+
+body {
+  font-family: sans-serif
+}
+
+.box-background {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  /* Bringing the box to center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 300px;
+  height: 100px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.box-alerta {
+  width: 700px;
+  height: 150px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.box div {
+  margin: 10px;
+}
+
+.btn {
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px;
+}
+.red {
+  background: red;
+}
+.green {
+  background: green;
+}
+
+.ok {
+  background: green;
+}

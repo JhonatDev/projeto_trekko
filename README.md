@@ -1,15 +1,34 @@
-O Trekko é uma ferramenta de colaboração e gerenciamento de projetos que serve para organizar tarefas e informações de forma visual e colaborativa. Ele permite que equipes e indivíduos acompanhem o progresso de projetos, gerenciem tarefas e colaborem de maneira eficiente. Aqui estão algumas das principais finalidades para as quais o Trekko é amplamente utilizado:
+# Trekko Gerenciador de Tarefas
 
-1. **Gerenciamento de Projetos:** O Trekko permite criar quadros para representar projetos e organizar tarefas em listas e cartões. Isso facilita o acompanhamento do progresso do projeto, a atribuição de tarefas e o gerenciamento de prazos.
+O Trekko Gerenciador de Tarefas é uma aplicação web simples para gerenciar suas tarefas. Ele permite que você crie tarefas, mova-as entre diferentes estágios e as exclua quando concluídas. Você também pode personalizar a cor de fundo da aplicação de acordo com suas preferências.
 
-2. **Gestão de Tarefas:** Pode ser usado como uma lista de tarefas pessoal, ajudando os usuários a manterem o controle de suas atividades diárias, lembretes e compromissos.
+## Funcionalidades
 
-3. **Acompanhamento de Tarefas em Equipe:** Equipes de trabalho podem compartilhar quadros do Trekko para colaborar em projetos em conjunto, atribuir e manter todos atualizados.
+- **Gerenciamento de Tarefas:** Crie tarefas com nomes e descrições. Organize as tarefas em diferentes estágios: "Para Fazer", "Fazendo" e "Concluído".
+- **Arrastar e Soltar:** Mova facilmente as tarefas entre os diferentes estágios usando a funcionalidade de arrastar e soltar.
+- **Exclusão de Tarefas:** Exclua tarefas que não são mais necessárias.
+- **Cor de Fundo Personalizada:** Escolha uma cor de fundo personalizada para a aplicação e deixe-a do seu jeito.
 
-4. **Colaboração Remota:** É uma opção eficaz para equipes que trabalham remotamente, pois permite que membros da equipe acessem e atualizem informações de qualquer lugar com uma conexão à internet.
+## Tecnologias Utilizadas
 
-5. **Gerenciamento de Informações:** Pode ser usado para organizar informações, ideias e projetos de forma a torná-los mais acessíveis e fáceis de entender.
+- **HTML:** Utilizado para estruturar as páginas web e criar a interface do usuário.
+- **CSS:** Utilizado para estilizar as páginas web e tornar a aplicação visualmente atraente.
+- **JavaScript:** Utilizado para adicionar interatividade à aplicação, incluindo a funcionalidade de arrastar e soltar.
+- **Font Awesome:** Utilizado para adicionar ícones aos botões de exclusão.
+- **LocalStorage:** Utilizado para armazenar localmente as tarefas e as preferências de cor de fundo do usuário.
 
-6. **Acompanhamento de Progresso:** O Trekko fornece uma visão clara do estado atual de cada tarefa ou projeto, ajudando os usuários a identificar gargalos e áreas que precisam de atenção.
+## Como Usar
 
-Em resumo, o Trekko é uma ferramenta versátil que serve como um quadro virtual para organização e colaboração em uma ampla variedade de contextos, desde o gerenciamento de projetos complexos até o acompanhamento de tarefas pessoais do dia a dia.
+1. **Adicionar uma Tarefa:**
+   - Insira o nome e a descrição da tarefa nos campos de entrada correspondentes.
+   - Clique no botão "Adicionar Tarefa" para adicionar a tarefa à coluna "Para Fazer".
+
+2. **Mover uma Tarefa:**
+   - Arraste uma tarefa de uma coluna e solte-a em outra para mudar seu estágio.
+
+3. **Excluir uma Tarefa:**
+   - Clique no ícone da lixeira para excluir uma tarefa. Um diálogo de confirmação será exibido antes da exclusão.
+
+4. **Alterar a Cor de Fundo:**
+   - Clique no ícone da paleta de cores para abrir o seletor de cores.
+   - Escolha uma cor no seletor para alterar a cor de fundo da aplicação.

@@ -1,4 +1,4 @@
-# Trekko Gerenciador de Tarefas
+# Trekko
 
 O Trekko Gerenciador de Tarefas é uma aplicação web simples para gerenciar suas tarefas. Ele permite que você crie tarefas, mova-as entre diferentes estágios e as exclua quando concluídas. Você também pode personalizar a cor de fundo da aplicação de acordo com suas preferências.
 

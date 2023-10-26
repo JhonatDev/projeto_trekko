@@ -27,11 +27,8 @@ function loadBackgroundColor() {
   
 }
 loadBackgroundColor();
-<<<<<<< HEAD
-=======
 
 // Salva a cor de fundo selecionada no armazenamento local
->>>>>>> 4a25331116251def52ae5d27b8299d7508922b74
 function saveBackgroundColor(color) {
   localStorage.setItem('backgroundColor', color);
 }
@@ -115,20 +112,20 @@ Essa promessa pode ser usada para continuar a execução do código com base na 
       });
     });
   });
-   // Anexa o título, descrição e botão de exclusão à caixa da tarefa
+   /*Anexa o título, descrição e botão de exclusão à caixa da tarefa*/
   taskBox.appendChild(titleTask);
   taskBox.appendChild(descriptionTask);
   taskBox.appendChild(deleteButton);
   return taskBox;
 }
 
-// Cria uma nova tarefa com os inputs fornecidos na coluna especificada
+/* Cria uma nova tarefa com os inputs fornecidos na coluna especificada*/
 function newTask(columnid) {
   const nameInput = document.getElementById(`${columnid}-nameInput`).value;
   const descriptionInput = document.getElementById(`${columnid}-descriptionInput`).value;
 
   if (nameInput.trim() === '' || descriptionInput.trim() === '') {
-      // Mostra um alerta se os campos estiverem vazios
+      /*Mostra um alerta se os campos estiverem vazios*/
       let element = document.createElement("div");
       element.classList.add("box-background");
       element.innerHTML = `<div class="box-alerta">
@@ -217,3 +214,10 @@ function loadTasks() {
   }
 }
 loadTasks();
+document.addEventListener('DOMContentLoaded', function() {
+  loadTasks();
+});
+/*Depois que o html e css forem rederizados ele vai dar prioridade a esta funçao */
+document.addEventListener('DOMContentLoaded', function() {
+  loadTasks();
+});

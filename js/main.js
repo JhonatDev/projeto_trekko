@@ -12,9 +12,9 @@ function loadBackgroundColor() {
   if (savedBackgroundColor) {
     document.body.style.backgroundColor = savedBackgroundColor;
   }
+  
 }
 loadBackgroundColor();
-
 function saveBackgroundColor(color) {
   localStorage.setItem('backgroundColor', color);
 }
@@ -45,9 +45,12 @@ function createTask(name, description) {
   taskBox.addEventListener('dragstart', function(event) {
     event.dataTransfer.setData('text/plain', null);
     event.target.classList.add('dragging');
+
   });
+
   taskBox.addEventListener('dragend', function(event) {
     event.target.classList.remove('dragging');
+
   });
   const deleteButton = document.createElement('button');
   deleteButton.className = "button2";

@@ -27,8 +27,6 @@ function loadBackgroundColor() {
   
 }
 loadBackgroundColor();
-
-// Salva a cor de fundo selecionada no armazenamento local
 function saveBackgroundColor(color) {
   localStorage.setItem('backgroundColor', color);
 }

@@ -91,41 +91,41 @@ function createTask(name, description) {
                                         <button id="falseButton" class="btn red">Não</button>
                                     </div>
                                 </div>`;
-        /*o código cria um diálogo de confirmação, anexa-o ao corpo da página e, em seguida, 
-        retorna uma promessa que pode ser resolvida com true ou false, 
-        dependendo da escolha do usuário no diálogo de confirmação. 
-        Essa promessa pode ser usada para continuar a execução do código com base na decisão do usuário.*/
-        document.body.appendChild(element);
-        return new Promise(function (resolve, reject) {
-            document.getElementById("trueButton").addEventListener("click", function () {
-                resolve(true);
-                taskBox.remove();
-                saveTask();
-                document.body.removeChild(element);
-            });
-            document.getElementById("falseButton").addEventListener("click", function () {
-                resolve(false);
-                document.body.removeChild(element);
-            });
-        });
+/*o código cria um diálogo de confirmação, anexa-o ao corpo da página e, em seguida, 
+retorna uma promessa que pode ser resolvida com true ou false, 
+dependendo da escolha do usuário no diálogo de confirmação. 
+Essa promessa pode ser usada para continuar a execução do código com base na decisão do usuário.*/                         
+    document.body.appendChild(element);
+    return new Promise(function(resolve, reject) {
+      document.getElementById("trueButton").addEventListener("click", function() {
+        resolve(true);
+        taskBox.remove();
+        saveTask();
+        document.body.removeChild(element);
+      });
+      document.getElementById("falseButton").addEventListener("click", function() {
+        resolve(false);
+        document.body.removeChild(element);
+      });
     });
-    // Anexa o título, descrição e botão de exclusão à caixa da tarefa
-    taskBox.appendChild(titleTask);
-    taskBox.appendChild(descriptionTask);
-    taskBox.appendChild(deleteButton);
-    return taskBox;
+  });
+   // Anexa o título, descrição e botão de exclusão à caixa da tarefa
+  taskBox.appendChild(titleTask);
+  taskBox.appendChild(descriptionTask);
+  taskBox.appendChild(deleteButton);
+  return taskBox;
 }
 
-// Cria uma nova tarefa com os inputs fornecidos na coluna especificada
+/* Cria uma nova tarefa com os inputs fornecidos na coluna especificada*/
 function newTask(columnid) {
     const nameInput = document.getElementById(`${columnid}-nameInput`).value;
     const descriptionInput = document.getElementById(`${columnid}-descriptionInput`).value;
 
-    if (nameInput.trim() === '' || descriptionInput.trim() === '') {
-        // Mostra um alerta se os campos estiverem vazios
-        let element = document.createElement("div");
-        element.classList.add("box-background");
-        element.innerHTML = `<div class="box-alerta">
+  if (nameInput.trim() === '' || descriptionInput.trim() === '') {
+      // Mostra um alerta se os campos estiverem vazios
+      let element = document.createElement("div");
+      element.classList.add("box-background");
+      element.innerHTML = `<div class="box-alerta">
                                     <h3>Por favor, preencha todos os campos antes de adicionar uma tarefa.</h3>
                                     <div>
                                         <button id="falseButton" class="btn ok">OK</button>
@@ -211,3 +211,10 @@ function loadTasks() {
     }
 }
 loadTasks();
+document.addEventListener('DOMContentLoaded', function() {
+  loadTasks();
+});
+/*Depois que o html e css forem rederizados ele vai dar prioridade a esta funçao */
+document.addEventListener('DOMContentLoaded', function() {
+  loadTasks();
+});
